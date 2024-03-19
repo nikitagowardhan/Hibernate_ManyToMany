@@ -4,7 +4,7 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
  
  <hibernate-mapping>
-   <class name = "www.asterisc.in.Hibernate_ManyToMany.model.Question" table="question_table" >
+   <class name = "www.asterisc.in.Hibernate_ManyToMany.model.Question" table="q	uestion_table" >
    
    <id name="id" type="int" column name="q_id">  
             <generator class="increment" />  
