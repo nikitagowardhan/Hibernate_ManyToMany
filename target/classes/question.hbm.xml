@@ -4,24 +4,20 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
  
  <hibernate-mapping>
-   <class name = "www.asterisc.in.Hibernate_ManyToMany.model.Question" table="q	uestion_table" >
+   <class name="www.asterisc.in.Hibernate_ManyToMany.model.Question" table="question_table">
    
-   <id name="id" type="int" column name="q_id">  
+        <id name="id" type="int">  
+            <column name="q_id" />  
             <generator class="increment" />  
         </id>  
         
-       
-     <property name="name" column="qname"/>
+        <property name="qname" column="qname"/>
      
-     <List name="answers" table="question_table" fetch="select" cascade="all">
-     <key column="q_id"></key>  
-       <index column="type"></index>   
-            <many-to-many class="www.asterisc.in.Hibernate_ManyToMany.model.Answer" column="ans_id" /> 
-         
-         
-     </List>     
-       
+        <list name="answers" table="question_answer" fetch="select" cascade="all">  
+            <key column="question_id" />  
+            <index column="answer_order" />
+            <many-to-many class="www.asterisc.in.Hibernate_ManyToMany.model.Answer" column="answer_id" />  
+        </list>  
+     
    </class> 
-     
-     
  </hibernate-mapping>

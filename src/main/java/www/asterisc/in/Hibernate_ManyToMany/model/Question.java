@@ -7,8 +7,6 @@ public class Question {
 	private int id;    
 	private String qname;    
 	private List<Answer> answers;
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -26,7 +24,10 @@ public class Question {
 	}
 	public void setAnswers(List<Answer> answers) {
 		this.answers = answers;
-	}  
+	}
+	
+	
+	
 	
 	
 	

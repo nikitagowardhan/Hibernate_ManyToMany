@@ -4,16 +4,15 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
  
  <hibernate-mapping>
-   <class name = "www.asterisc.in.Hibernate_ManyToMany.model.Answer" table="answer_table" >
+   <class name="www.asterisc.in.Hibernate_ManyToMany.model.Answer" table="answer_table">
    
         <id name="id" type="int">  
-            <column name="ans_id" />  
+            <column name="answer_id" />  
             <generator class="increment" />  
         </id>  
-        <property name="answername"  />  
-        <property name="postedBy" />  
-    </class>  
-     
-     
- </hibernate-mapping>  
-   
+        
+        <property name="answername" column="answername" />  
+        <property name="postedBy" column="postedBy" />  
+    
+   </class>  
+ </hibernate-mapping>
